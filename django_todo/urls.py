@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
 from django.urls import path
 # import the function
@@ -20,6 +22,7 @@ from todo.views import get_todo_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # usually takes the url user types in, the view function to return and a name param
+    # usually takes the url user types in, the view function to return and 
+    # a name param
     path('', get_todo_list, name='get_todo_list')
 ]
