@@ -7,15 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a Todo Item:</h1>
-   <form method="POST" action="add">
+    <h1>Edit a Todo Item:</h1>
+    <!-- no action sends data to current page -->
+    <form method="POST">
        <!-- below makes sure info submitted has come from the app -->
         {% csrf_token %}
         <!-- render form as template var -->
         {{ form.as_p }}
        <div>
            <p>
-                <button type="submit">Add Item</button>
+                <button type="submit">Update Item</button>
             </p>
        </div>
    </form>
